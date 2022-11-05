@@ -10,7 +10,14 @@ public class Quiz {
 	private int grade;
 	private List<Question> questions = new ArrayList<Question>();
 	
-	public Quiz() {}
+	public Quiz(String title, int id, String authorEmail, String topic, int grade) {
+		super();
+		this.title = title;
+		this.id = id;
+		this.authorEmail = authorEmail;
+		this.topic = topic;
+		this.grade = grade;
+	}
 
 	public String getTitle() {
 		return title;

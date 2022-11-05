@@ -7,9 +7,17 @@ public class User {
 	private String username;
 	private String password;
 	private String email;
+	private int id;
 	private List<Quiz> quizzes = new ArrayList<Quiz>();
 	
-	public User() {}
+	public User(String firstName, String lastName, String username, String password, String email, int id) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -59,7 +67,24 @@ public class User {
 		this.quizzes = quizzes;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	public User getUser() {
+		return this;
+	}
+
 	//Methods
+	public String getName() {
+		return this.firstName+" "+this.lastName;
+	}
+	public int getQuizCount() {
+		return this.quizzes.size();
+	}
 	public void addQuiz(Quiz quiz) {
 		this.quizzes.add(quiz);
 	}
