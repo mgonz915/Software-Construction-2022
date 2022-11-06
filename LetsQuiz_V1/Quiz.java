@@ -78,6 +78,15 @@ public class Quiz {
 	public void removeQuestion(int id) {
 		this.questions.remove(id);
 	}
+	public void gradeQuiz() {
+		int sum = 0;
+		for(int i = 0; i < this.questions.size(); i++) {
+			if(this.questions.get(i).isCorrect()) {
+				sum++;
+			}
+		}
+		this.grade = sum/this.questions.size();
+	}
 	
 	
 	

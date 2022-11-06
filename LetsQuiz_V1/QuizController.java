@@ -66,6 +66,7 @@ public class QuizController {
 							
 							if(0 < Integer.parseInt(option) && Integer.parseInt(option) < user.getQuizCount() + 1) {
 									quizController(Integer.parseInt(option) - 1);
+									selected = true;
 									break;
 							}
 						}
@@ -89,7 +90,7 @@ public class QuizController {
 		Quiz quiz = user.getQuizzes().get(id).getQuiz();
 		display.quizInformation(quiz.getTitle(), quiz.getTopic(), quiz.getAuthorEmail(), quiz.getQuestions().size());
 		
-		for(int i = 0; i < user.getQuizCount(); i++){
+		for(int i = 0; i < user.getQuizzes().get(id).getQuestions().size(); i++){
 			display.question(quiz.getQuestions().get(i).getTitle(), quiz.getQuestions().get(i).getContent(), quiz.getQuestions().get(i).getAnswers());
 			display.promptOption("SELECT QUESTION OPTION");
 			String option = scn.next();
@@ -98,7 +99,8 @@ public class QuizController {
 				quiz.getQuestions().get(i).setCorrect(true);
 			}	
 		}
-		//quiz.gradeQuiz();
+		quiz.gradeQuiz();
+		display.quizResult(quiz.getTitle(), quiz.getTopic(), quiz.getAuthorEmail(), quiz.getQuestions().size(), quiz.getGrade());
 	}
 	public static boolean authenticateUser(String username, String password) {
 		for(int i = 0; i < users.size(); i++) {

@@ -77,4 +77,9 @@ public class QuizView {
 		}
 		System.out.println("----------------------------------------------");
 	}
+	public void quizResult(String title, String topic, String author, int count, int result) {
+		System.out.println("\nQUIZ: "+title+" - INFORMATION:\n----------------------------------------------");
+		System.out.println("\tTitle: "+title+"\n\tTopic: "+topic+"\n\tQuiz Author: "+author+"\n\tQuestions: "+count+"\n\tResult: "+result);
+		System.out.println("----------------------------------------------");
+	}
 }
