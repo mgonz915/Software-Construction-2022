@@ -1,0 +1,12 @@
+This is the Java Lets Quiz V2:
+- I did not comment the code so 
+  whoops, but I added simple code and proper names.
+
+User:
+	averdin
+	1234
+
+Only Quiz 0 has questions, so any other will not display them.
+
+I used a list data structure since it was the first thing
+that came to mind. It can change.
