@@ -39,6 +39,9 @@ public class LetsQuizView {
 	public void quizInformation(String title, String topic, String author, int questionCount) {
 		System.out.println("\tQuiz Title: "+title+"\n\tQuiz Topic: "+topic+"\n\tQuiz Author: "+author+"\n\tQuestion Total: "+questionCount);
 	}
+	public void quizResults(String title, String topic, String author, int questionCount, double result) {
+		System.out.println("\tQuiz Title: "+title+"\n\tQuiz Topic: "+topic+"\n\tQuiz Author: "+author+"\n\tQuestion Total: "+questionCount+"\n\tQuiz Grade: "+result);
+	}
 	public void question(int num, String question, String[] questionAnswers) {
 		System.out.println("\tQ"+(num + 1)+": "+question);
 		for(int i = 0; i < questionAnswers.length; i++) {

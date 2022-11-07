@@ -22,6 +22,7 @@ public class RunLetsQuiz {
 					run.selectQuizzes();
 					run.startQuiz();
 					run.startQuestions();
+					run.quizResults();
 					break;
 				case "d":
 					run.viewGrades();

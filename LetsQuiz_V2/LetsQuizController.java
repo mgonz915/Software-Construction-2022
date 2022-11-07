@@ -84,10 +84,12 @@ public class LetsQuizController {
 				display.inputMSG("Select Answer");
 				option = scn.next();
 				
-				String[] answerChoices = quiz.getQuestion(i).getQuestionAnswers();
-				for(int j = 0; j < answerChoices.length; i++) {
-					if(answerChoices[i].equals(option)) {
-						quiz.getQuestion(i).setAnswer(option);
+				String[] answerChoices = quiz.getQuestion(i).getAnswerOptions();
+				for(int j = 0; j < answerChoices.length; j++) {
+					if(answerChoices[j].equals(option)) {
+						if(option.equals(quiz.getQuestion(i).getAnswer())) {
+							quiz.getQuestion(i).setCorrect(true);
+						}
 						isValid = true;
 						break;
 					}
@@ -95,6 +97,14 @@ public class LetsQuizController {
 			}
 			
 		}
+	}
+	
+	public void quizResults() {
+		Quiz quiz = user.getQuizzes().get(quizID);
+		display.headerMSG(quiz.getTitle()+" Results");
+		quiz.gradeQuiz();
+		display.quizResults(quiz.getTitle(), quiz.getTopic(), quiz.getAuthorEmail(), quiz.getQuestionCount(), quiz.getGrade());
+		display.footerMSG();
 	}
 	
 	public void viewUserInformation() {

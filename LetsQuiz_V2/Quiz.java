@@ -6,7 +6,7 @@ public class Quiz {
 	private String title;
 	private String authorEmail;
 	private String topic;
-	private double grade;
+	private double grade = 0.0;
 	private int id;	
 	private List<Question> questions = new ArrayList<Question>();
 	
@@ -69,7 +69,12 @@ public class Quiz {
 				sum++;
 			}
 		}
-		this.grade = (sum/this.getQuestionCount())*100.0;
+		if(sum == 0.0) {
+			this.grade = 0.0;
+		}
+		else {
+			this.grade = (sum/this.getQuestionCount())*100.0;
+		}
 	}
 	public Quiz getQuiz() {
 		return this;
