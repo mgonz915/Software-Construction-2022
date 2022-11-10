@@ -18,7 +18,7 @@ if(!empty($_POST)){
             $input_password = $_POST['password'];
             
             #submitting a query into the database, allowing us to retrieve 
-            $query = "SELECT * FROM users WHERE username='" . $input_username ."and WHERE password='". $input_password . "';";
+            $query = "SELECT * FROM users WHERE userName='" . $input_username ."and WHERE password='". $input_password . "';";
             $result = $pdo->query($query);
 
             if($row = $result->fetch()){
