@@ -6,7 +6,8 @@ var myQuestions = [
         b: '5',
         c: '115'
       },
-      correctAnswer: 'b'
+      correctAnswer: 'b',
+      Author: "Michael",
     },
     {
       question: "What is 30/3?",
@@ -15,7 +16,18 @@ var myQuestions = [
         b: '5',
         c: '10'
       },
-      correctAnswer: 'c'
+      correctAnswer: 'c',
+      Author: "Michael",
+    },
+    {
+      question: "What is 9+10?",
+      answers: {
+        a: '3',
+        b: '5',
+        c: '10'
+      },
+      correctAnswer: 'c',
+      Author: "Alexis",
     },
   ];
 
@@ -35,6 +47,7 @@ var myQuestions = [
     
         // for each question...
         for(var i=0; i<3; i++){
+          console.log(questions[i])
           
           
         
@@ -42,7 +55,7 @@ var myQuestions = [
           output.push(
             '<div class="userQuizContainer">' 
             + '<a href="./quiz_page.html">' 
-              + '<div style="padding: 20px; margin: 20px; background-color: red;">'+ 'QUIZ_NAME: ' + i + '</div>'
+              + '<div style="padding: 20px; margin: 20px; background-color: red;">'+ 'QUIZ_NAME: ' + questions[i].question+ '</div>'
             + '</a>'
            + '</div>'
           );
