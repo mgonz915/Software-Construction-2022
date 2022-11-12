@@ -15,7 +15,7 @@ class Quiz{
     private $grade;
     private $id;
 
-    //Constructor
+    //Quiz Constructor
     function __construct($title, $authorEmail, $topic, $grade, $id){
         $this->title = $title;
         $this->authorEmail = $authorEmail;
@@ -24,7 +24,7 @@ class Quiz{
         $this->id = $id;
     }
 
-    //Getters and Setters
+    //Quiz Getters and Setters
     function getTitle(){
         return $this->title;
     }
