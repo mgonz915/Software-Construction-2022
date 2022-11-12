@@ -18,7 +18,7 @@ require_once "user_Log_in.html";
                     $input_username = $_POST['username'];
                     $input_password = $_POST['password'];
     
-                    $query = "SELECT * FROM users WHERE userName='" . $input_username ."';";
+                    $query = "SELECT * FROM web_user WHERE userName='" . $input_username ."';";
                     $result = $pdo->query($query);
                     
                     //allows to enter log in info if right, if not it will print user not found if log in info is wrong
@@ -26,7 +26,7 @@ require_once "user_Log_in.html";
                     if($row = $result->fetch()){
                         //$_SESSION['user'] = $input_username;
                         $_SESSION['user'] = $row['firstName']; //will send the first name of the user into the main page
-                        header("Location: main_page.php");
+                        header("Location: user_dashboard.php");
                     }else{
                             echo "User not found.";
                         }

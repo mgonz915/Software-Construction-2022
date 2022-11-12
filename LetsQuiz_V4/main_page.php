@@ -9,7 +9,7 @@
       <div id="content-wrap">
 
         <div class="topnav">
-          <a class="active" href="/html/quiz_home_page.html">Home</a>
+          <a class="active" href="main_page.php">Home</a>
           <!-- <a href="/quiz_page.html">QUIZ</a> -->
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
@@ -42,72 +42,13 @@
         </div>
 
         
-        <div style="padding-left:16px; height: 400px">
-          <h3>Test your skills on our curated CS Quizzes.</h3>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> <!-- maybe make unique pages for specific quizes or find a way to pass a variable to them -->
-              <div style="padding: 20px; margin: 20px; background-color: red;">Java</div>
-            </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: orange;">Python</div>
-            </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: green;">C</div>
-              </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: blue;">PHP</div>
-              </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> <!-- maybe make unique pages for specific quizes or find a way to pass a variable to them -->
-              <div style="padding: 20px; margin: 20px; background-color: red;">Arrays</div>
-            </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: orange;">Queue</div>
-            </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: green;">Stack</div>
-              </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: blue;">Hash Map</div>
-              </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> <!-- maybe make unique pages for specific quizes or find a way to pass a variable to them -->
-              <div style="padding: 20px; margin: 20px; background-color: red;">A</div>
-            </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: orange;">B</div>
-            </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: green;">C</div>
-              </a>
-          </div>
-          <div class="topicContainer">
-            <a href="./html/quiz_page.html"> 
-              <div style="padding: 20px; margin: 20px; background-color: blue;">D</div>
-              </a>
-          </div>
+        <center><h3>Test your skills on our curated CS Quizzes.</h3></center>
+        <div id="topicsContainerDiv" style="padding-left:16px; height: 400px">
+          
         </div>
 
+        <center><h3>Try other CS Quizzes desinged by other users.</h3></center>
         <div id="userQuizSection" style="padding-left:16px; height: 400px">
-          <h3>Try other CS Quizzes desinged by other users.</h3> 
           
         </div>
 
@@ -129,5 +70,5 @@
        </footer>
   
     </body>
-    <script src="./javascript/user_quiz_container.js"></script>
+    <script src="quiz_controller.js"></script>
   </html>
