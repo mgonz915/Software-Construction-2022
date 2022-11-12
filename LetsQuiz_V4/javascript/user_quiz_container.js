@@ -40,6 +40,29 @@ var myQuestions = [
 
     showQuizContainer(myQuestions,quizContainer);
 
+    var catContainer = document.getElementById('topicsContainerDiv');
+
+    showQuizCategories(catContainer);
+
+    function showQuizCategories(categoriesContainer){
+      var output = [];
+
+      categories = ["A","B","V","D","E","F","G","H" ];
+      for (var i=0; i< 8; i++ ){
+        output.push(
+        '<div class="topicContainer">'
+            +  '<a href="/html/quiz_page.html">' 
+              +  '<div style="padding: 20px; margin: 20px; background-color: blue;">'+ categories[i]+'</div>'
+            +    '</a>'
+          +  '</div>'
+        );
+
+        categoriesContainer.innerHTML = output.join('');
+
+      }
+
+    }
+
     function showQuizContainer(questions, quizContainer){
         // we'll need a place to store the output and the answer choices
         var output = [];
@@ -54,7 +77,7 @@ var myQuestions = [
           // add this question and its answers to the output
           output.push(
             '<div class="userQuizContainer">' 
-            + '<a href="./quiz_page.html">' 
+            + '<a href="/LetsQuiz_V4/html/quiz_page.html">' 
               + '<div style="padding: 20px; margin: 20px; background-color: red;">'+ 'QUIZ_NAME: ' + questions[i].question+ '</div>'
             + '</a>'
            + '</div>'
