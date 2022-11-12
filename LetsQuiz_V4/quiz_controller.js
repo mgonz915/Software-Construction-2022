@@ -1,40 +1,10 @@
-var myQuestions = [ 
-    {
-      question: "What is 10/2?",
-      answers: {
-        a: '3',
-        b: '5',
-        c: '115'
-      },
-      correctAnswer: 'b',
-      Author: "Michael",
-    },
-    {
-      question: "What is 30/3?",
-      answers: {
-        a: '3',
-        b: '5',
-        c: '10'
-      },
-      correctAnswer: 'c',
-      Author: "Michael",
-    },
-    {
-      question: "What is 9+10?",
-      answers: {
-        a: '3',
-        b: '5',
-        c: '10'
-      },
-      correctAnswer: 'c',
-      Author: "Alexis",
-    },
-  ];
-
-// Replace Above with a way to get the 3-6 latest quizzes made 
-
-//this class may be a sub function needed in quiz view/contrtoller
-
+/**
+ * Module Name: quiz_controller class
+ * Author: Michael Gonzalez
+ * Date Created: 11/11/22
+ * Last modified by: Michael Gonzalez
+ * Date last modified: 11/12/22
+ */
 
     var quizContainer = document.getElementById('userQuizSection');
 
@@ -52,11 +22,11 @@ var myQuestions = [
     function showQuizCategories(categoriesContainer){
       var output = [];
 
-      categories = ["A","B","V","D","E","F","G","H" ];
+      categories = ["A","B","C","D","E","F","G","H" ];
       for (var i=0; i< 8; i++ ){
         output.push(
         '<div class="topicContainer">'
-            +  '<a href="quiz_page.php">' 
+            +  '<a href="quiz_page.php?subject='+categories[i] +' ">' 
               +  '<div style="padding: 20px; margin: 20px; background-color: blue;">'+ categories[i]+'</div>'
             +    '</a>'
           +  '</div>'
@@ -71,41 +41,34 @@ var myQuestions = [
     function showQuizContainer(questions, quizContainer){
         // we'll need a place to store the output and the answer choices
         var output = [];
-        var answers;
-    
+
         // for each question...
         for(var i=0; i<3; i++){
-          console.log(questions[i])
-          
-          
-        
+
           // add this question and its answers to the output
           output.push(
+
             '<div class="userQuizContainer">' 
             + '<a href="/LetsQuiz_V4/html/quiz_page.html">' 
               + '<div style="padding: 20px; margin: 20px; background-color: red;">'+ 'QUIZ_NAME: ' + questions[i].question+ '</div>'
             + '</a>'
            + '</div>'
           );
-
-          
-
-
         }
-    
         // finally combine our output list into one string of html and put it on the page
         quizContainer.innerHTML = output.join('');
+
       }
 
+  function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+    showQuestions(questions, quizContainer);
+
+    showResults(questions, quizContainer, resultsContainer)
 
 
+  }
 
-
-
-
-
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-  
     function showQuestions(questions, quizContainer){
       // we'll need a place to store the output and the answer choices
       var output = [];
@@ -175,5 +138,3 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
       // show number of correct answers out of total
       resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
     }
-
-}
