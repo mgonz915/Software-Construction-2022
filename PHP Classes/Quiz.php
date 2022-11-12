@@ -1,11 +1,21 @@
+<!--
+/**
+ * Module Name: Quiz Class
+ * Author: Alan Verdin
+ * Description: Class represents the attributes of a quiz.
+ */
+-->
 <?php
 class Quiz{
+
+    //Quiz Attributes
     private $title;
     private $authorEmail;
     private $topic;
     private $grade;
     private $id;
 
+    //Constructor
     function __construct($title, $authorEmail, $topic, $grade, $id){
         $this->title = $title;
         $this->authorEmail = $authorEmail;
@@ -14,6 +24,7 @@ class Quiz{
         $this->id = $id;
     }
 
+    //Getters and Setters
     function getTitle(){
         return $this->title;
     }
