@@ -6,6 +6,14 @@ class Quiz{
     private $grade;
     private $id;
 
+    function __construct($title, $authorEmail, $topic, $grade, $id){
+        $this->title = $title;
+        $this->authorEmail = $authorEmail;
+        $this->topic = $topic;
+        $this->grade = $grade;
+        $this->id = $id;
+    }
+
     function getTitle(){
         return $this->title;
     }
