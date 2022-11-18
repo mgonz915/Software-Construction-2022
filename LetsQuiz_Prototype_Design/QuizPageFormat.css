@@ -87,12 +87,13 @@ h1 {
     border: none;
     outline: 2px solid #000;
     height: 30px;
-    width: 100%;
+    width:49%;
     background: whitesmoke;
     color: #000;
     font-size: 17px;
     border-radius: 10px;
     margin-bottom: 10px;
+    margin-right: 6px;
 }
 
 .quiz input[type="submit"]:hover{
