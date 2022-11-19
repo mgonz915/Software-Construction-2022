@@ -25,7 +25,7 @@
                     //if user is logged in
                     if (isset($_SESSION['user'])){
                         $username = $_SESSION['user'];
-                        print "<li><a href='logout.php'> ( $username ) user log out</a></li><br><br>";
+                        print "<li><a href='user_dashboard.php'> ( $username ) </a></li><br><br>";
                         }else {
 
                             print "<li><a href='user_Log_in.html'> LOGIN</a></li><br> ";

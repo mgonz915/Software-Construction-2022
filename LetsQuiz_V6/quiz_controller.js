@@ -81,7 +81,7 @@ var myQuestions = [
           // add this quiz to the output
           output.push(
             '<div class="userQuizContainer">' 
-            + '<a href=quiz_page.php?quizID=' + 5 + '>' 
+            + '<a href=quiz_page.php?quizID=' + 1020 + '>' 
               + '<div>'+ questions[i].question+ '</div>'
             + '</a>'
            + '</div>'

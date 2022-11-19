@@ -14,19 +14,17 @@
 
             $query = "SELECT * FROM Question WHERE subject='".$subject."';";
             $result = $pdo->query($query);
-            $questionNumber = 1;
 
             while($row = $result->fetch()){
                 $correct_answer = htmlspecialchars($row['answer']);
                 $title = htmlspecialchars($row['title']);
-                $title = str_replace(" ", "", $title);
+                $title2 = str_replace(" ", "", $title);
                 //header("Location: user_dashboard.php");
-                if($_POST[$title] == $correct_answer){
-                    print"<h1> Question $questionNumber: correct </h1>";
+                if($_POST[$title2] == $correct_answer){
+                    print"<h1> correct </h1>";
                 } else{
-                    print"<h1> Question $questionNumber: incorrect </h1>";
+                    print"<h1> incorrect </h1>";
                 }
-                $questionNumber += 1;
                 
             }
 //            else{
