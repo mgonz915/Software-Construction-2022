@@ -56,8 +56,8 @@ var myQuestions = [
       for (var i=0; i< 8; i++ ){
         output.push(
         '<div class="topicContainer">'
-            +  '<a href=quiz_page.php?subject='+ categories[i]  +' >'
-              +  '<div style="padding: 20px; margin: 20px; background-color: blue;">'+ categories[i]+'</div>'
+            +  '<a href=quiz_page.php?subject='+ categories[i]  +'>'
+              +  '<div>'+ categories[i]+'</div>'
             +    '</a>'
           +  '</div>'
         );
@@ -69,9 +69,8 @@ var myQuestions = [
     }
 
     function showQuizContainer(questions, quizContainer){
-        // we'll need a place to store the output and the answer choices
+        // we'll need a place to store the quizzes to display
         var output = [];
-        var answers;
     
         // for each question...
         for(var i=0; i<3; i++){
@@ -79,11 +78,11 @@ var myQuestions = [
           
           
         
-          // add this question and its answers to the output
+          // add this quiz to the output
           output.push(
             '<div class="userQuizContainer">' 
-            + '<a href="/LetsQuiz_V4/html/quiz_page.html">' 
-              + '<div style="padding: 20px; margin: 20px; background-color: red;">'+ 'QUIZ_NAME: ' + questions[i].question+ '</div>'
+            + '<a href=quiz_page.php?quizID=' + 5 + '>' 
+              + '<div>'+ questions[i].question+ '</div>'
             + '</a>'
            + '</div>'
           );

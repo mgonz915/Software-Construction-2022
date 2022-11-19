@@ -10,9 +10,7 @@
   <body>
       
     <div class="topnav">
-        <a class="active" href="main_page.php">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a class="active" href="main_page.php">Exit Quiz</a>
     </div>
     
     <main>

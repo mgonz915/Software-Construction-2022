@@ -27,14 +27,20 @@
 
                     <!--Adds Text To Login Box-->
                     <h1>USER LOGIN</h1>
-                    <form>
-                        <p>USERNAME:</p>
-                        <input type="text" name="" placeholder="ENTER USERNAME">
-                        <p>PASSWORD:</p>
-                        <input type="password" name="" placeholder="ENTER PASSWORD">
-                        <input type="submit" name="" value="LOGIN">
+                    <form action= "check_users.php" method ="post">
+                        <div class = "form-group">
+                            <label for = "username">Username:</label>
+                            <input class = "form-control" type = "text" name = "username">
+                        </div>
+                        <div class = "form-group">
+                            <label for = "password">Password:</label>
+                            <input class = "form-control" type = "password" name = "password">
+                        </div>
+                        <div class = "form-group">
+                            <input class="btn btn-primary" name='Submit' type="submit" value="Submit">
+                        </div>
                         <a href="#">NEED AN ACCOUNT?</a><br>
-                        <a href="GuestDashboard.html">GO BACK?</a><br>
+                        <a href="GuestDashboard.html">CANCEL</a><br>
                     </form>
                 </div>
             </div>

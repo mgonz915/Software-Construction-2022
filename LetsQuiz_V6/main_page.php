@@ -13,9 +13,9 @@
         <nav>
               <ul>
                   <!--Add Redirect Links-->
-                  <li><a href="GuestDashboard.html">HOME</a></li>
-                  <li><a href="ContactPage.html">CONTACT</a></li>
-                  <li><a href="AboutPage.html">ABOUT</a></li>
+                  <li><a href="main_page.php">HOME</a></li>
+                  <li><a href="contact_page.php">CONTACT</a></li>
+                  <li><a href="about_page.php">ABOUT</a></li>
                   <?php
                     session_start();
                     require_once("config.php");
@@ -34,14 +34,16 @@
               </ul>
         </nav>
 
-        
+        <br><br>
         <h1>WELCOME TO LET'S QUIZ!</h1>
+        <br>
         <p class="description">YOUR ONE STOP TO RAISING COMPUTER SCIENCE KNOWLEDGE AND UNDERSTANDING.</p></center>
         <p class="description">MAKE SURE TO LOGIN FOR THE FULL EXPERIENCE!.</p>
+        <br>
 
         
         <center><h3>Test your skills on our curated CS Quizzes.</h3></center>
-        <div id="topicsContainerDiv" style="padding-left:16px; height: 400px">
+        <div id="topicsContainerDiv" style="padding-left:16px; height: 300px">
           
         </div>
 
