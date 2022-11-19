@@ -27,8 +27,16 @@
                 throw new PDOException($e->getMessage(), (int)$e->getCode());
             }
 
-            $subject = $_GET['subject'];
-            $query = "SELECT * FROM Question WHERE subject='".$subject."';";
+            if(isset($_GET['subject'])){
+                $subject = $_GET['subject'];
+                $query = "SELECT * FROM Question WHERE subject='".$subject."';";
+            }
+            if(isset($_GET['quizID'])){
+
+                $quizID = $_GET['quizID'];
+                print"<h1>$quizID</h1>";
+                $query = "SELECT * FROM Question WHERE quizID=$quizID";
+            }
 
             $result = $pdo->query($query);
             print "
