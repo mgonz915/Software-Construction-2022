@@ -27,22 +27,27 @@
                 throw new PDOException($e->getMessage(), (int)$e->getCode());
             }
 
-            if(isset($_GET['subject'])){
-                $subject = $_GET['subject'];
-                $query = "SELECT * FROM Question WHERE subject='".$subject."';";
-            }
-            if(isset($_GET['quizID'])){
+            if(isset($_GET['type'])){
+                $type = $_GET['type'];
+                if ($type == 0){
+                    $subject = $_GET['subject'];
+                    $query = "SELECT * FROM Question WHERE subject='".$subject."';";
+                    print "
+                    <div class = 'form-group'>
+                        <form action='check_answer.php?subject=$subject&type=0' method = 'POST'>
+                    ";
 
-                $quizID = $_GET['quizID'];
-                print"<h1>$quizID</h1>";
-                $query = "SELECT * FROM Question WHERE quizID=$quizID";
+                }else{
+                    $quizID = $_GET['quizID'];
+                    $query = "SELECT * FROM Question WHERE quizID='".$quizID."';";
+                    print "
+                    <div class = 'form-group'>
+                        <form action='check_answer.php?quizID=$quizID&type=1' method = 'POST'>
+                    ";
+                }
             }
 
             $result = $pdo->query($query);
-            print "
-            <div class = 'form-group'>
-                <form action='check_answer.php?subject=$subject' method = 'POST'>
-                ";
             while($row = $result->fetch()){
                 $title = htmlspecialchars($row['title']);
                 // get rid of white space in the title
@@ -76,8 +81,6 @@
         ?>
         <button id="submit">Get Results</button>
         <div id="results"></div>
-
-        <a href="https://simplestepscode.com/javascript-quiz-tutorial/" target="_blank">Click here for the JavaScript quiz tutorial (in case you're on CodePen)</a>
 
     </main>
 	<script src="quiz_controller.js"></script>

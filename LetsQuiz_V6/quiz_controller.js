@@ -56,7 +56,7 @@ var myQuestions = [
       for (var i=0; i< 8; i++ ){
         output.push(
         '<div class="topicContainer">'
-            +  '<a href=quiz_page.php?subject='+ categories[i]  +'>'
+            +  '<a href=quiz_page.php?subject='+ categories[i]  +'&type=0 >'
               +  '<div>'+ categories[i]+'</div>'
             +    '</a>'
           +  '</div>'
@@ -81,7 +81,7 @@ var myQuestions = [
           // add this quiz to the output
           output.push(
             '<div class="userQuizContainer">' 
-            + '<a href=quiz_page.php?quizID=' + 1020 + '>' 
+            + '<a href=quiz_page.php?quizID=' + 1020 + '&type=1>' 
               + '<div>'+ questions[i].question+ '</div>'
             + '</a>'
            + '</div>'

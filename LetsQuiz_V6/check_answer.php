@@ -10,9 +10,18 @@
                 throw new PDOException($e->getMessage(), (int)$e->getCode());
             }
 //            $answer = $_POST['answer'];
-            $subject = $_GET['subject'];
 
-            $query = "SELECT * FROM Question WHERE subject='".$subject."';";
+            if(isset($_GET['type'])){
+                $type = $_GET['type'];
+                if ($type == 0){
+                    $subject = $_GET['subject'];
+                    $query = "SELECT * FROM Question WHERE subject='".$subject."';";
+
+                }else{
+                    $quizID = $_GET['quizID'];
+                    $query = "SELECT * FROM Question WHERE quizID='".$quizID."';";
+                }
+            }
             $result = $pdo->query($query);
 
             while($row = $result->fetch()){
