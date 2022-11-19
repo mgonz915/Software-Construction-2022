@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$db ="scm";
+$db ="mysql";
 $username ="root";
-$password ="colton94";
+$password ="mysql";
 $chrs = 'utf8mb4';
 $atrr = "mysql:host = $host; dbname=$db; charset=$chrs";
 $opts =   [
