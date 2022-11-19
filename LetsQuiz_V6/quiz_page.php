@@ -29,13 +29,13 @@
                 throw new PDOException($e->getMessage(), (int)$e->getCode());
             }
 
-            $quizID = $_GET['quizID'];
-            $query = "SELECT * FROM Question WHERE quizID=$quizID";
+            $subject = $_GET['subject'];
+            $query = "SELECT * FROM Question WHERE subject='".$subject."';";
 
             $result = $pdo->query($query);
             print "
             <div class = 'form-group'>
-                <form action='check_answer.php' method = 'POST'>
+                <form action='check_answer.php?subject=$subject' method = 'POST'>
                 ";
             while($row = $result->fetch()){
                 $title = htmlspecialchars($row['title']);

@@ -9,21 +9,27 @@
             }catch (PDOException $e){
                 throw new PDOException($e->getMessage(), (int)$e->getCode());
             }
-            $answer = $_POST['answer'];
-        
-            $query = "SELECT answer FROM Question";
+//            $answer = $_POST['answer'];
+            $subject = $_GET['subject'];
+
+            $query = "SELECT * FROM Question WHERE subject='".$subject."';";
             $result = $pdo->query($query);
 
-            if($row = $result->fetch()){
+            while($row = $result->fetch()){
                 $correct_answer = htmlspecialchars($row['answer']);
+                $title = htmlspecialchars($row['title']);
+                $title2 = str_replace(" ", "", $title);
                 //header("Location: user_dashboard.php");
-                if($answer == $correct_answer){
+                if($_POST[$title2] == $correct_answer){
                     print"<h1> correct </h1>";
-                } 
-                
-            }else{
-                    echo "quiz not found.";
+                } else{
+                    print"<h1> incorrect </h1>";
                 }
+                
+            }
+//            else{
+//                    echo "quiz not found.";
+//                }
           
        
         ?>
