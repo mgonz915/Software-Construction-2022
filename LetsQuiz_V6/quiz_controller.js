@@ -52,12 +52,12 @@ var myQuestions = [
     function showQuizCategories(categoriesContainer){
       var output = [];
 
-      categories = ["Java","C","Python","D","E","F","G","H" ];
+      categories = ["Java","Python","ANIMALS","HTML","JavaScript","C#","Ruby","C++" ];
       for (var i=0; i< 8; i++ ){
         output.push(
         '<div class="topicContainer">'
-            +  '<a href=quiz_page.php?subject='+ categories[i]  +' >' 
-              +  '<div style="padding: 20px; margin: 20px; background-color: blue;">'+ categories[i]+'</div>'
+            +  '<a href=quiz_page.php>' 
+             +  '<div style="padding: 20px; margin: 20px; background-color: blue;">'+ categories[i]+'</div>'
             +    '</a>'
           +  '</div>'
         );
@@ -87,10 +87,6 @@ var myQuestions = [
             + '</a>'
            + '</div>'
           );
-
-          
-
-
         }
     
         // finally combine our output list into one string of html and put it on the page

@@ -1,12 +1,97 @@
 body{
-    font-size: 20px;
-    font-family: sans-serif;
-    color: rgb(68, 61, 61);
-    background-color: #F3ECEA ;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    background-color: rgb(147, 159, 209);
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    font-family: Impact;
     
   }
+
+  .page-container {
+    width: 800px;
+    height: 900px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    }
+  
+  .content-wrap {
+    width: 790px;
+    height: 890px;
+    background-color: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 10px;
+    }
+
+    .logo{
+      width: 220px;
+      height: 140px;
+      position: absolute;
+      top: 1%;
+      left: 70%;
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  nav{
+      width: 100%;
+      height: 100px;
+      background-color: whitesmoke;
+      outline: 2px solid #000;
+  }
+  
+  ul li{
+      list-style: none;
+      display: inline-block;
+      float: left;
+      line-height: 100px;
+  }
+  
+  ul li a{
+      text-decoration: none;
+      font-size: 22px;
+      font-family: Impact;
+      color: #000;
+      padding: 0px 25px;
+  }
+  
+  ul li a:hover{
+      background-color: #04AA6D;
+  }
+
+
+  h1 {
+    margin: 0;
+    padding: 40 0 10px;
+    font-size: 40px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
   .question{
     font-weight: 600;
   }
@@ -94,13 +179,3 @@ body{
   .credits div{
     padding: 10px;
   }
-
-  #page-container {
-  position: relative;
-  min-height: 100vh;
-  }
-
-  #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
-  }
-    
