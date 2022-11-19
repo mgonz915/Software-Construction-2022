@@ -51,13 +51,13 @@
                 // can use either a dynamically created variable for name field or use question title
                print"
                         <a> $question </a><br><br> 
-                        <input type='radio' id='a' name='.$title.' value='a'>
+                        <input type='radio' id='a' name='$title' value='a'>
                         <label for='a'>$op1</label><br>
-                        <input type='radio' id='b' name='.$title.' value='b'>
+                        <input type='radio' id='b' name='$title' value='b'>
                         <label for='b'>$op2</label><br>
-                        <input type='radio' id='c' name='.$title.' value='c'>
+                        <input type='radio' id='c' name='$title' value='c'>
                         <label for='c'>$op3</label><br>
-                        <input type='radio' id='d' name='.$title.' value='d'>
+                        <input type='radio' id='d' name='$title' value='d'>
                         <label for='d'>$op4</label><br>
                 </div>
                 ";
