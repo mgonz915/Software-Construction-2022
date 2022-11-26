@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(147, 159, 209);
+    background-size: cover;
+    background-position: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.backbox{
+    width: 390px;
+    height: 490px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.loginbox{
+    width: 380px;
+    height: 480px;
+    background-color: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 110px 30px;
+}
+
+.logo{
+    width: 230px;
+    height: 150px;
+    position: absolute;
+    top: -10%;
+    left: 19%;
+}
+
+.facebookLogo{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 88%;
+    left: 22%;
+}
+
+.twitterLogo{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: #000;
+    top: 88%;
+    left: 34%;
+}
+
+.instagramLogo{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 88%;
+    left: 46%;
+}
+
+.discordLogo{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 88%;
+    left: 58%;
+}
+
+.linkedInLogo{
+    width: 45px;
+    height: 40px;
+    position: absolute;
+    top: 88%;
+    left: 70%;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]{
+    border: none;
+    outline: 2px solid #000;
+    height: 30px;
+    background: whitesmoke;
+    color: #000;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: aquamarine;
+    color: #000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+}
+
+.loginbox a:hover{
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
+
+.facebookLogo:hover, .discordLogo:hover, .instagramLogo:hover, .twitterLogo:hover, .linkedInLogo:hover{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+}

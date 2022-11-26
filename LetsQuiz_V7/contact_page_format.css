@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(147, 159, 209);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.backbox{
+    width: 800px;
+    height: 900px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.menubox{
+    width: 790px;
+    height: 890px;
+    background-color: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 10px;
+}
+
+.logo{
+    width: 220px;
+    height: 140px;
+    position: absolute;
+    top: 1%;
+    left: 70%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+    outline: 2px solid #000;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    line-height: 100px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Impact;
+    color: #000;
+    padding: 25px 25px;
+}
+
+ul li a:hover{
+    background-color: #04AA6D;
+    border-radius: 10px;
+}
+
+h1{
+    margin: 0;
+    padding: 40 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.menubox p{
+    margin: 0;
+    padding: 0 0 5;
+}
+
+.menubox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menubox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+
+.menubox input[type="submit"]{
+    border: none;
+    outline: 2px solid #000;
+    height: 30px;
+    background: whitesmoke;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.menubox input[type="submit"]:hover{
+    cursor: pointer;
+    background: rgb(131, 147, 192);
+    color: #000;
+}
+
+.menubox textarea{
+    width: 100%;
+    height: 15%;
+    outline: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+}
