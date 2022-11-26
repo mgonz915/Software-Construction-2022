@@ -58,7 +58,7 @@
                     ";
                 }
             }
-            
+                    $counter = 1;
                     $result = $pdo->query($query);
                     while($row = $result->fetch()){
                         $title = htmlspecialchars($row['title']);
@@ -74,7 +74,7 @@
                         // can use either a dynamically created variable for name field or use question title
                     print"
                         <fieldset id='$title'>
-                                <a> $question </a><br><br> 
+                                <a>#$counter: $question </a><br><br> 
                                 <input type='radio' id='a' name='$title' value='a'required>
                                 <label for='a'>$op1</label><br>
                                 <input type='radio' id='b' name='$title' value='b'required>
@@ -86,6 +86,7 @@
                         </fieldset>
                         
                         ";
+                        $counter++;
                     }
                     print"
                     </div>";
