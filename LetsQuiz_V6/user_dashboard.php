@@ -31,7 +31,7 @@
                     //if user is logged in
                     if (isset($_SESSION['user'])){
                         $username = $_SESSION['user'];
-                        print "<h1>Welcome Back $username</h1>";
+                        print "<h1>Welcome Back, $username</h1>";
                         }else {
 
                             print "<li><a href='user_Log_in.html'> LOGIN</a></li><br> ";
@@ -39,7 +39,6 @@
                     ?>
         <br>
         <p class="description">YOUR ONE STOP TO RAISING COMPUTER SCIENCE KNOWLEDGE AND UNDERSTANDING.</p></center>
-        <p class="description">MAKE SURE TO LOGIN FOR THE FULL EXPERIENCE!.</p>
         <br>
 
         

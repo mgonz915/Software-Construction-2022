@@ -1,6 +1,6 @@
 var myQuestions = [ 
     {
-      question: "What is 10/2?",
+      question: "CS 1 Quiz",
       answers: {
         a: '3',
         b: '5',
@@ -10,7 +10,7 @@ var myQuestions = [
       Author: "Michael",
     },
     {
-      question: "What is 30/3?",
+      question: "Data Structures",
       answers: {
         a: '3',
         b: '5',
@@ -20,7 +20,7 @@ var myQuestions = [
       Author: "Michael",
     },
     {
-      question: "What is 9+10?",
+      question: "Complexity Quiz",
       answers: {
         a: '3',
         b: '5',
@@ -52,7 +52,7 @@ var myQuestions = [
     function showQuizCategories(categoriesContainer){
       var output = [];
 
-      categories = ["Java","C","C++","Python","Go","Ruby","SQL","C#" ];
+      categories = ["Java","C","PHP","Python","Stacks","Queue","HashMap","Arrays" ];
       for (var i=0; i< 8; i++ ){
         output.push(
         '<div class="topicContainer">'
@@ -71,6 +71,7 @@ var myQuestions = [
     function showQuizContainer(questions, quizContainer){
         // we'll need a place to store the quizzes to display
         var output = [];
+        var quizIds = [1001, 2002, 3003]
     
         // for each question...
         for(var i=0; i<3; i++){
@@ -81,7 +82,7 @@ var myQuestions = [
           // add this quiz to the output
           output.push(
             '<div class="userQuizContainer">' 
-            + '<a href=quiz_page.php?quizID=' + 1020 + '&type=1>' 
+            + '<a href=quiz_page.php?quizID=' + quizIds[i] + '&type=1>' 
               + '<div>'+ questions[i].question+ '</div>'
             + '</a>'
            + '</div>'

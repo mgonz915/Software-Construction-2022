@@ -21,6 +21,7 @@ body{
     }
   
   .content-wrap {
+    overflow-y: scroll;
     width: 790px;
     height: 940px;
     background-color: #fff;
@@ -162,5 +163,17 @@ body{
 
   .credits div{
     padding: 10px;
+  }
+
+  .correct{
+    color: green;
+  }
+
+  .wrong{
+    color: red;
+  }
+
+  #reload{
+    display: none;
   }
 

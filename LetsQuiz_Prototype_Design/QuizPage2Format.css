@@ -4,7 +4,8 @@ body{
     background-color: rgb(147, 159, 209);
     background-size: cover;
     background-position: center;
-    font-family: impact;
+    font-size: 20px;
+    font-family: Impact;
 }
 
 .backbox{
